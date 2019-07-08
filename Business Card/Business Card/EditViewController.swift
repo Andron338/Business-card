@@ -21,12 +21,17 @@ class EditViewController: UIViewController {
     @IBAction func dateTextField(_ sender: UITextField) {
         let datePickerView:UIDatePicker = UIDatePicker()
         datePickerView.datePickerMode = UIDatePicker.Mode.date
+        if dateTextField.text! != "" {
+            let dateSetFormatter = DateFormatter()
+            dateSetFormatter.dateFormat = "MMMM d, y"
+            datePickerView.date = dateSetFormatter.date(from: dateTextField.text!)!
+        }
         dateTextField.inputView = datePickerView
         datePickerView.addTarget(self, action: #selector(datePickerFromValueChanged), for: UIControl.Event.valueChanged)
         }
     @objc func datePickerFromValueChanged(sender:UIDatePicker) {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMMM d, YYYY"
+        dateFormatter.dateFormat = "MMMM d, y"
         dateTextField.text = dateFormatter.string(from: sender.date)
     }
 }
