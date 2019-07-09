@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D3BD330322D3688200229E39 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD330222D3688200229E39 /* EditViewController.swift */; };
 		D3BD330522D3991800229E39 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD330422D3991800229E39 /* ProfileTableViewController.swift */; };
 		D3BD330722D39D8400229E39 /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD330622D39D8400229E39 /* EditProfileTableViewController.swift */; };
 		E615B0D322D25A0E007892F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E615B0D222D25A0E007892F2 /* AppDelegate.swift */; };
@@ -17,7 +16,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D3BD330222D3688200229E39 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		D3BD330422D3991800229E39 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		D3BD330622D39D8400229E39 /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
 		E615B0CF22D25A0E007892F2 /* Business Card.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Business Card.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,7 +57,6 @@
 			isa = PBXGroup;
 			children = (
 				E615B0D222D25A0E007892F2 /* AppDelegate.swift */,
-				D3BD330222D3688200229E39 /* EditViewController.swift */,
 				D3BD330422D3991800229E39 /* ProfileTableViewController.swift */,
 				D3BD330622D39D8400229E39 /* EditProfileTableViewController.swift */,
 				E615B0D622D25A0E007892F2 /* Main.storyboard */,
@@ -144,7 +141,6 @@
 				E615B0D322D25A0E007892F2 /* AppDelegate.swift in Sources */,
 				D3BD330722D39D8400229E39 /* EditProfileTableViewController.swift in Sources */,
 				D3BD330522D3991800229E39 /* ProfileTableViewController.swift in Sources */,
-				D3BD330322D3688200229E39 /* EditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
