@@ -17,13 +17,17 @@ class ProfileTableViewController: UITableViewController {
     @IBOutlet weak var phoneNumberLabel: UILabel!
     @IBOutlet weak var biographyLabel: UILabel!
     @IBOutlet weak var profileImageView: UIImageView!
-    var profileUser = User(currentLocation: "Magnise", birthdayDate: "February 7, 1999", originalLocation: "Ternopil", phoneNumber: "+380961234567", userBiography: "Some body once told me the world is gonna roll me ...", studiedAt: "Home")
+    var profileUser = User()
     let imageUrl = URL(string: "https://i.pinimg.com/originals/43/f9/07/43f90790a622f7af320e254686f6243f.jpg")
     override func viewDidLoad() {
         
         super.viewDidLoad()
         profileImageView.load(url: imageUrl!)
         profileImageView.layer.cornerRadius = profileImageView.frame.height / 2
+        displayInfoOnTable(userInfo: profileUser)
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        profileUser = User(userDefaults: UserDefaults.standard)
         displayInfoOnTable(userInfo: profileUser)
     }
     override func numberOfSections(in tableView: UITableView) -> Int {

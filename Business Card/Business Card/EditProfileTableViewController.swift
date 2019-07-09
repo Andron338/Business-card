@@ -46,6 +46,10 @@ class EditProfileTableViewController: UITableViewController {
         dateTextField.inputView = datePickerView
         datePickerView.addTarget(self, action: #selector(datePickerFromValueChanged), for: UIControl.Event.valueChanged)
     }
+    @IBAction func saveButtonPereesed(_ sender: Any) {
+        updateUserFromView(userInfo: editableUserProfile)
+        editableUserProfile.saveToUserDefaults(userDefaults: UserDefaults.standard)
+    }
     @objc func datePickerFromValueChanged(sender:UIDatePicker) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMMM d, y"
@@ -60,6 +64,14 @@ class EditProfileTableViewController: UITableViewController {
         biographyTextField.text = userInfo.userBiography
     }
     
+    func updateUserFromView(userInfo: User){
+        userInfo.currentLocation = livesInTextField.text ?? ""
+        userInfo.birthdayDate = bornOnTextField.text ?? ""
+        userInfo.originalLocation = FromTextField.text ?? ""
+        userInfo.studiedAt = studiedAtTextField.text ?? ""
+        userInfo.phoneNumber = phoneNumberTextField.text ?? ""
+        userInfo.userBiography = biographyTextField.text ?? ""
+    }
 }
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {

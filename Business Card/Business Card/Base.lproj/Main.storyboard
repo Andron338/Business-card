@@ -369,7 +369,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Edit Profile" id="mBm-mp-q5I">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="27g-n3-JwV"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="27g-n3-JwV">
+                            <connections>
+                                <action selector="saveButtonPereesed:" destination="gfn-yr-UMq" id="niF-M5-Cf7"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="FromTextField" destination="nZ1-No-uB8" id="rIS-YK-aGI"/>
