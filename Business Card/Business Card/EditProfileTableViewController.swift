@@ -12,12 +12,18 @@ class EditProfileTableViewController: UITableViewController {
 
     @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var dateTextField: UITextField!
+    @IBOutlet weak var bornOnTextField: UITextField!
+    @IBOutlet weak var FromTextField: UITextField!
+    @IBOutlet weak var studiedAtTextField: UITextField!
+    @IBOutlet weak var biographyTextField: UITextField!
+    @IBOutlet weak var livesInTextField: UITextField!
+    var editableUserProfile = User()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
         self.phoneNumberTextField.keyboardType = UIKeyboardType.decimalPad
+        displayInfoOnEdit(userInfo: editableUserProfile)
     }
-
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -45,6 +51,15 @@ class EditProfileTableViewController: UITableViewController {
         dateFormatter.dateFormat = "MMMM d, y"
         dateTextField.text = dateFormatter.string(from: sender.date)
     }
+    func displayInfoOnEdit(userInfo: User){
+        livesInTextField.text = userInfo.currentLocation
+        bornOnTextField.text = userInfo.birthdayDate
+        FromTextField.text = userInfo.originalLocation
+        studiedAtTextField.text = userInfo.studiedAt
+        phoneNumberTextField.text = userInfo.phoneNumber
+        biographyTextField.text = userInfo.userBiography
+    }
+    
 }
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {

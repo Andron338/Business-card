@@ -29,7 +29,7 @@
         <scene sceneID="uwf-Uc-2xu">
             <objects>
                 <tableViewController id="isN-68-ku3" customClass="ProfileTableViewController" customModule="Business_Card" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="YnV-cr-EQX">
+                    <tableView key="view" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="YnV-cr-EQX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -65,7 +65,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lives in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ryn-mJ-v0L">
-                                                    <rect key="frame" x="16" y="11" width="58" height="21"/>
+                                                    <rect key="frame" x="16" y="11" width="343" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -82,7 +82,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Born on" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u71-lZ-Qnp">
-                                                    <rect key="frame" x="16" y="11" width="60" height="21"/>
+                                                    <rect key="frame" x="16" y="11" width="343" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -99,7 +99,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="From" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3B-AP-i5p">
-                                                    <rect key="frame" x="16" y="11" width="40" height="21"/>
+                                                    <rect key="frame" x="16" y="11" width="343" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -116,7 +116,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Studied at" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GgC-c6-VwL">
-                                                    <rect key="frame" x="16" y="11" width="79" height="21"/>
+                                                    <rect key="frame" x="16" y="11" width="343" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -140,7 +140,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+380" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRS-Lz-2Jt">
-                                                    <rect key="frame" x="16" y="39" width="42" height="21"/>
+                                                    <rect key="frame" x="16" y="39" width="343" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -163,7 +163,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kpd-m7-eCz">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kpd-m7-eCz">
                                                     <rect key="frame" x="23" y="29" width="336" height="116"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -184,12 +184,18 @@
                     <navigationItem key="navigationItem" title="Profile" id="QpP-7Z-eet">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="ABp-Wk-5nl">
                             <connections>
-                                <segue destination="gfn-yr-UMq" kind="show" id="1dU-au-9k3"/>
+                                <segue destination="gfn-yr-UMq" kind="show" identifier="editProfile" id="ss2-2g-NWy"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="profileImageView" destination="cQ0-DG-J1G" id="xtZ-7N-Kng"/>
+                        <outlet property="BornOnLabel" destination="u71-lZ-Qnp" id="nUR-P9-ST4"/>
+                        <outlet property="FromLabel" destination="T3B-AP-i5p" id="6PW-yI-uYG"/>
+                        <outlet property="LivesInLabel" destination="Ryn-mJ-v0L" id="Vor-eT-e1J"/>
+                        <outlet property="StudiedAtLabel" destination="GgC-c6-VwL" id="9iI-0h-j3q"/>
+                        <outlet property="biographyLabel" destination="Kpd-m7-eCz" id="qKe-kt-wNB"/>
+                        <outlet property="phoneNumberLabel" destination="VRS-Lz-2Jt" id="ryj-cJ-s9V"/>
+                        <outlet property="profileImageView" destination="cQ0-DG-J1G" id="q8M-ob-vdt"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gej-tI-cTX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -366,13 +372,18 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="27g-n3-JwV"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="FromTextField" destination="nZ1-No-uB8" id="rIS-YK-aGI"/>
+                        <outlet property="biographyTextField" destination="RAf-yE-E4T" id="mH2-2w-J9r"/>
+                        <outlet property="bornOnTextField" destination="Vur-T6-Arc" id="5W1-X1-tcO"/>
                         <outlet property="dateTextField" destination="Vur-T6-Arc" id="23Y-Lh-Ex4"/>
+                        <outlet property="livesInTextField" destination="FwY-Lx-9Pa" id="DYn-PX-eoi"/>
                         <outlet property="phoneNumberTextField" destination="MYz-9d-fb3" id="JBj-xD-TGr"/>
+                        <outlet property="studiedAtTextField" destination="r13-XF-Zwy" id="ci3-Hm-8TV"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aHi-Q7-81D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-255.19999999999999" y="-107.49625187406298"/>
+            <point key="canvasLocation" x="-420" y="-107"/>
         </scene>
     </scenes>
 </document>

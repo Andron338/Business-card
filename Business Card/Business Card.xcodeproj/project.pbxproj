@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D376155C22D4B2560024D7F1 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D376155B22D4B2560024D7F1 /* UserModel.swift */; };
 		D3BD330522D3991800229E39 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD330422D3991800229E39 /* ProfileTableViewController.swift */; };
 		D3BD330722D39D8400229E39 /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BD330622D39D8400229E39 /* EditProfileTableViewController.swift */; };
 		E615B0D322D25A0E007892F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E615B0D222D25A0E007892F2 /* AppDelegate.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D376155B22D4B2560024D7F1 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		D3BD330422D3991800229E39 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		D3BD330622D39D8400229E39 /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
 		E615B0CF22D25A0E007892F2 /* Business Card.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Business Card.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +62,7 @@
 				D3BD330422D3991800229E39 /* ProfileTableViewController.swift */,
 				D3BD330622D39D8400229E39 /* EditProfileTableViewController.swift */,
 				E615B0D622D25A0E007892F2 /* Main.storyboard */,
+				D376155B22D4B2560024D7F1 /* UserModel.swift */,
 				E615B0D922D25A11007892F2 /* Assets.xcassets */,
 				E615B0DB22D25A11007892F2 /* LaunchScreen.storyboard */,
 				E615B0DE22D25A11007892F2 /* Info.plist */,
@@ -140,6 +143,7 @@
 			files = (
 				E615B0D322D25A0E007892F2 /* AppDelegate.swift in Sources */,
 				D3BD330722D39D8400229E39 /* EditProfileTableViewController.swift in Sources */,
+				D376155C22D4B2560024D7F1 /* UserModel.swift in Sources */,
 				D3BD330522D3991800229E39 /* ProfileTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

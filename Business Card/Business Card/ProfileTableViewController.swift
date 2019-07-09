@@ -10,80 +10,45 @@ import UIKit
 
 class ProfileTableViewController: UITableViewController {
 
+    @IBOutlet weak var LivesInLabel: UILabel!
+    @IBOutlet weak var BornOnLabel: UILabel!
+    @IBOutlet weak var FromLabel: UILabel!
+    @IBOutlet weak var StudiedAtLabel: UILabel!
+    @IBOutlet weak var phoneNumberLabel: UILabel!
+    @IBOutlet weak var biographyLabel: UILabel!
     @IBOutlet weak var profileImageView: UIImageView!
+    var profileUser = User(currentLocation: "Magnise", birthdayDate: "February 7, 1999", originalLocation: "Ternopil", phoneNumber: "+380961234567", userBiography: "Some body once told me the world is gonna roll me ...", studiedAt: "Home")
     let imageUrl = URL(string: "https://i.pinimg.com/originals/43/f9/07/43f90790a622f7af320e254686f6243f.jpg")
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         profileImageView.load(url: imageUrl!)
         profileImageView.layer.cornerRadius = profileImageView.frame.height / 2
+        displayInfoOnTable(userInfo: profileUser)
     }
-
-    // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return 7
     }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "editProfile" {
+            let nextScene =  segue.destination as! EditProfileTableViewController
+            
+            // Pass the selected object to the new view controller.
+            nextScene.editableUserProfile = profileUser
+        }
     }
-    */
+    func displayInfoOnTable(userInfo: User){
+        LivesInLabel.text = "Lives in "+userInfo.currentLocation
+        BornOnLabel.text = "Born on "+userInfo.birthdayDate
+        FromLabel.text = "From "+userInfo.originalLocation
+        StudiedAtLabel.text = "Studied at "+userInfo.studiedAt
+        phoneNumberLabel.text = userInfo.phoneNumber
+        biographyLabel.text = userInfo.userBiography
+    }
 
 }
 extension UIImageView {
