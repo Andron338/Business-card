@@ -165,27 +165,29 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biography" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ad-iV-amz">
-                                                    <rect key="frame" x="16" y="0.0" width="78" height="21"/>
+                                                    <rect key="frame" x="16" y="11" width="78" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kpd-m7-eCz">
-                                                    <rect key="frame" x="23" y="29" width="336" height="116"/>
+                                                <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GiG-lz-erN">
+                                                    <rect key="frame" x="16" y="40" width="335" height="132"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="116" id="bIh-MX-lNi"/>
+                                                        <constraint firstAttribute="height" constant="132" id="6E8-hR-WAq"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Kpd-m7-eCz" firstAttribute="trailing" secondItem="5BG-Ef-0kA" secondAttribute="trailingMargin" id="29y-3M-8nz"/>
-                                                <constraint firstItem="Kpd-m7-eCz" firstAttribute="top" secondItem="0Ad-iV-amz" secondAttribute="bottom" constant="8" symbolic="YES" id="67n-FB-ovK"/>
-                                                <constraint firstItem="0Ad-iV-amz" firstAttribute="leading" secondItem="5BG-Ef-0kA" secondAttribute="leadingMargin" id="HsI-dc-A1k"/>
-                                                <constraint firstItem="Kpd-m7-eCz" firstAttribute="leading" secondItem="5BG-Ef-0kA" secondAttribute="leadingMargin" constant="7" id="W9B-Dg-EU3"/>
-                                                <constraint firstItem="0Ad-iV-amz" firstAttribute="top" secondItem="5BG-Ef-0kA" secondAttribute="top" id="pmi-ez-iFL"/>
+                                                <constraint firstItem="GiG-lz-erN" firstAttribute="top" secondItem="0Ad-iV-amz" secondAttribute="bottom" constant="8" id="2dW-re-N82"/>
+                                                <constraint firstItem="0Ad-iV-amz" firstAttribute="top" secondItem="5BG-Ef-0kA" secondAttribute="topMargin" id="9mD-Zh-EeF"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="GiG-lz-erN" secondAttribute="bottom" constant="-19" id="YfE-qY-0NV"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="GiG-lz-erN" secondAttribute="trailing" constant="8" id="f6q-eO-8jl"/>
+                                                <constraint firstItem="0Ad-iV-amz" firstAttribute="leading" secondItem="5BG-Ef-0kA" secondAttribute="leadingMargin" id="hQG-tD-ZqZ"/>
+                                                <constraint firstItem="GiG-lz-erN" firstAttribute="leading" secondItem="0Ad-iV-amz" secondAttribute="leading" id="iBF-ye-ulK"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -209,7 +211,7 @@
                         <outlet property="FromLabel" destination="T3B-AP-i5p" id="6PW-yI-uYG"/>
                         <outlet property="LivesInLabel" destination="Ryn-mJ-v0L" id="Vor-eT-e1J"/>
                         <outlet property="StudiedAtLabel" destination="GgC-c6-VwL" id="9iI-0h-j3q"/>
-                        <outlet property="biographyLabel" destination="Kpd-m7-eCz" id="qKe-kt-wNB"/>
+                        <outlet property="biographyLabel" destination="GiG-lz-erN" id="fua-Cq-PqD"/>
                         <outlet property="phoneNumberLabel" destination="VRS-Lz-2Jt" id="ryj-cJ-s9V"/>
                         <outlet property="profileImageView" destination="cQ0-DG-J1G" id="q8M-ob-vdt"/>
                     </connections>
@@ -384,29 +386,22 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="253"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biography" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPj-4p-LaB">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Biography" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPj-4p-LaB">
                                                     <rect key="frame" x="16" y="0.0" width="78" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" text="dfd" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RAf-yE-E4T">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3Wy-my-oFO">
                                                     <rect key="frame" x="16" y="26" width="343" height="216"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="216" id="2ky-lE-bor"/>
-                                                    </constraints>
-                                                    <nil key="textColor"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="RAf-yE-E4T" firstAttribute="leading" secondItem="xPj-4p-LaB" secondAttribute="leading" id="5OG-g8-YP1"/>
-                                                <constraint firstItem="RAf-yE-E4T" firstAttribute="bottom" secondItem="6CR-x5-szY" secondAttribute="bottomMargin" id="HUD-vd-fo5"/>
-                                                <constraint firstItem="RAf-yE-E4T" firstAttribute="trailing" secondItem="6CR-x5-szY" secondAttribute="trailingMargin" id="X8K-np-XWb"/>
-                                                <constraint firstItem="RAf-yE-E4T" firstAttribute="leading" secondItem="6CR-x5-szY" secondAttribute="leadingMargin" id="aaC-Jg-Z81"/>
-                                                <constraint firstItem="RAf-yE-E4T" firstAttribute="top" secondItem="xPj-4p-LaB" secondAttribute="bottom" constant="5" id="dRP-Lp-6qu"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -426,7 +421,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="FromTextField" destination="nZ1-No-uB8" id="rIS-YK-aGI"/>
-                        <outlet property="biographyTextField" destination="RAf-yE-E4T" id="mH2-2w-J9r"/>
+                        <outlet property="biographyTextField" destination="3Wy-my-oFO" id="4XN-Wk-TZM"/>
                         <outlet property="bornOnTextField" destination="Vur-T6-Arc" id="5W1-X1-tcO"/>
                         <outlet property="dateTextField" destination="Vur-T6-Arc" id="23Y-Lh-Ex4"/>
                         <outlet property="livesInTextField" destination="FwY-Lx-9Pa" id="DYn-PX-eoi"/>
@@ -436,7 +431,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aHi-Q7-81D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-420" y="-107"/>
+            <point key="canvasLocation" x="-420" y="-107.49625187406298"/>
         </scene>
     </scenes>
 </document>

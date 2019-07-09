@@ -15,7 +15,7 @@ class EditProfileTableViewController: UITableViewController {
     @IBOutlet weak var bornOnTextField: UITextField!
     @IBOutlet weak var FromTextField: UITextField!
     @IBOutlet weak var studiedAtTextField: UITextField!
-    @IBOutlet weak var biographyTextField: UITextField!
+    @IBOutlet weak var biographyTextField: UITextView!
     @IBOutlet weak var livesInTextField: UITextField!
     var editableUserProfile = User()
     override func viewDidLoad() {

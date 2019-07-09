@@ -15,7 +15,7 @@ class ProfileTableViewController: UITableViewController {
     @IBOutlet weak var FromLabel: UILabel!
     @IBOutlet weak var StudiedAtLabel: UILabel!
     @IBOutlet weak var phoneNumberLabel: UILabel!
-    @IBOutlet weak var biographyLabel: UILabel!
+    @IBOutlet weak var biographyLabel: UITextView!
     @IBOutlet weak var profileImageView: UIImageView!
     var profileUser = User()
     let imageUrl = URL(string: "https://i.pinimg.com/originals/43/f9/07/43f90790a622f7af320e254686f6243f.jpg")
