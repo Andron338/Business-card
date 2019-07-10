@@ -21,15 +21,15 @@ class ProfileTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        profileImageView.layer.cornerRadius = profileImageView.frame.height / 2
-    }
-    override func viewWillAppear(_ animated: Bool) {
         if let profileImageFromFile = UserDefaults.standard.object(forKey: "profileImage"){
             profileImageView.image = UIImage.init(data: profileImageFromFile as! Data)
         }
         else{
             profileImageView.load(url: imageUrl!)
         }
+        profileImageView.layer.cornerRadius = profileImageView.frame.height / 2
+    }
+    override func viewWillAppear(_ animated: Bool) {
         displayInfoOnTable(userInfo: User(userDefaults: UserDefaults.standard))
     }
     
