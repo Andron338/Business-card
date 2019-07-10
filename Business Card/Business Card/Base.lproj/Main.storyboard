@@ -368,9 +368,6 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="yes" keyboardType="phonePad" smartDashesType="yes" textContentType="tel"/>
-                                                    <connections>
-                                                        <action selector="phoneNumberValueChanged:" destination="gfn-yr-UMq" eventType="valueChanged" id="3py-b5-TM1"/>
-                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -426,7 +423,7 @@
                     <navigationItem key="navigationItem" title="Edit Profile" id="mBm-mp-q5I">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="27g-n3-JwV">
                             <connections>
-                                <action selector="saveButtonPereesed:" destination="gfn-yr-UMq" id="niF-M5-Cf7"/>
+                                <action selector="saveButtonPressed:" destination="gfn-yr-UMq" id="h6f-PR-Gqi"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

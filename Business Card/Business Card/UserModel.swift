@@ -23,6 +23,7 @@ class User{
         self.userBiography = userBiography
         self.studiedAt = studiedAt
     }
+    
     init(){
         self.currentLocation = ""
         self.birthdayDate = ""
@@ -31,6 +32,7 @@ class User{
         self.userBiography = ""
         self.studiedAt = ""
     }
+    
     init(userDefaults: UserDefaults){
         currentLocation = userDefaults.object(forKey: "currentLocation") as? String ?? ""
         birthdayDate = userDefaults.object(forKey: "birthdate") as? String ?? ""
@@ -39,6 +41,7 @@ class User{
         userBiography = userDefaults.object(forKey: "biography") as? String ?? ""
         studiedAt = userDefaults.object(forKey: "studiedAt") as? String ?? ""
     }
+    
     func saveToUserDefaults(userDefaults: UserDefaults) {
         userDefaults.set(currentLocation, forKey: "currentLocation")
         userDefaults.set(birthdayDate, forKey: "birthdate")

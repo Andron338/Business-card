@@ -18,6 +18,7 @@ class ProfileTableViewController: UITableViewController {
     @IBOutlet weak var biographyLabel: UITextView!
     @IBOutlet weak var profileImageView: UIImageView!
     let imageUrl = URL(string: "https://i.pinimg.com/originals/43/f9/07/43f90790a622f7af320e254686f6243f.jpg")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         profileImageView.layer.cornerRadius = profileImageView.frame.height / 2
@@ -31,6 +32,7 @@ class ProfileTableViewController: UITableViewController {
         }
         displayInfoOnTable(userInfo: User(userDefaults: UserDefaults.standard))
     }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -58,6 +60,7 @@ extension ProfileTableViewController {
         biographyLabel.text = userInfo.userBiography
     }
 }
+
 extension UIImageView {
     func load(url: URL) {
         DispatchQueue.global().async { [weak self] in

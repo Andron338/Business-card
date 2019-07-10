@@ -32,6 +32,7 @@ class EditProfileTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 6
     }
+    
     @IBAction func dateTextField(_ sender: UITextField) {
         let datePickerView:UIDatePicker = UIDatePicker()
         datePickerView.datePickerMode = UIDatePicker.Mode.date
@@ -43,19 +44,16 @@ class EditProfileTableViewController: UITableViewController {
         dateTextField.inputView = datePickerView
         datePickerView.addTarget(self, action: #selector(datePickerFromValueChanged), for: UIControl.Event.valueChanged)
     }
-    @IBAction func saveButtonPereesed(_ sender: Any) {
+    @IBAction func saveButtonPressed(_ sender: Any) {
         updateUserFromView(userInfo: editableUserProfile)
         editableUserProfile.saveToUserDefaults(userDefaults: UserDefaults.standard)
     }
-    @IBAction func phoneNumberValueChanged(_ sender: Any) {
-    }
+    
     @objc func datePickerFromValueChanged(sender:UIDatePicker) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMMM d, y"
         dateTextField.text = dateFormatter.string(from: sender.date)
     }
-    
-    
     
 }
 
@@ -85,6 +83,7 @@ extension EditProfileTableViewController {
         biographyTextField.text = userInfo.userBiography
     }
 }
+
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
