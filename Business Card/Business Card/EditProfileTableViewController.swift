@@ -21,18 +21,15 @@ class EditProfileTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
-        self.phoneNumberTextField.keyboardType = UIKeyboardType.decimalPad
+        self.phoneNumberTextField.keyboardType = UIKeyboardType.phonePad
         displayInfoOnEdit(userInfo: editableUserProfile)
     }
-    // MARK: - Table view data source
-
+ 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return 6
     }
     @IBAction func dateTextField(_ sender: UITextField) {
@@ -49,6 +46,8 @@ class EditProfileTableViewController: UITableViewController {
     @IBAction func saveButtonPereesed(_ sender: Any) {
         updateUserFromView(userInfo: editableUserProfile)
         editableUserProfile.saveToUserDefaults(userDefaults: UserDefaults.standard)
+    }
+    @IBAction func phoneNumberValueChanged(_ sender: Any) {
     }
     @objc func datePickerFromValueChanged(sender:UIDatePicker) {
         let dateFormatter = DateFormatter()
@@ -69,7 +68,12 @@ class EditProfileTableViewController: UITableViewController {
         userInfo.birthdayDate = bornOnTextField.text ?? ""
         userInfo.originalLocation = FromTextField.text ?? ""
         userInfo.studiedAt = studiedAtTextField.text ?? ""
-        userInfo.phoneNumber = phoneNumberTextField.text ?? ""
+        if phoneNumberTextField.text!.prefix(4) != "+380" {
+             userInfo.phoneNumber = "+380" + (phoneNumberTextField.text ?? "").replacingOccurrences(of: "+", with: "")
+        }
+        else {
+            userInfo.phoneNumber = phoneNumberTextField.text ?? "+380"
+        }
         userInfo.userBiography = biographyTextField.text ?? ""
     }
 }

@@ -17,18 +17,19 @@ class ProfileTableViewController: UITableViewController {
     @IBOutlet weak var phoneNumberLabel: UILabel!
     @IBOutlet weak var biographyLabel: UITextView!
     @IBOutlet weak var profileImageView: UIImageView!
-    var profileUser = User()
-    let imageUrl = URL(string: "https://i.pinimg.com/originals/43/f9/07/43f90790a622f7af320e254686f6243f.jpg")
+    let imageUrl = URL(string: "https://www.splcenter.org/sites/default/files/ir163_briefs_kek.1.jpg") //"https://i.pinimg.com/originals/43/f9/07/43f90790a622f7af320e254686f6243f.jpg")
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        profileImageView.load(url: imageUrl!)
         profileImageView.layer.cornerRadius = profileImageView.frame.height / 2
-        displayInfoOnTable(userInfo: profileUser)
     }
     override func viewWillAppear(_ animated: Bool) {
-        profileUser = User(userDefaults: UserDefaults.standard)
-        displayInfoOnTable(userInfo: profileUser)
+        if let profileImageFromFile = UserDefaults.standard.object(forKey: "profileImage"){
+            profileImageView.image = UIImage.init(data: profileImageFromFile as! Data)
+        }
+        else{
+            profileImageView.load(url: imageUrl!)
+        }
+        displayInfoOnTable(userInfo: User(userDefaults: UserDefaults.standard))
     }
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -40,9 +41,7 @@ class ProfileTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "editProfile" {
             let nextScene =  segue.destination as! EditProfileTableViewController
-            
-            // Pass the selected object to the new view controller.
-            nextScene.editableUserProfile = profileUser
+            nextScene.editableUserProfile = User(userDefaults: UserDefaults.standard)
         }
     }
     func displayInfoOnTable(userInfo: User){
@@ -61,10 +60,13 @@ extension UIImageView {
             if let data = try? Data(contentsOf: url) {
                 if let image = UIImage(data: data) {
                     DispatchQueue.main.async {
+                        UserDefaults().set(data, forKey: "profileImage")
                         self?.image = image
                     }
                 }
             }
         }
     }
+    
+    
 }
