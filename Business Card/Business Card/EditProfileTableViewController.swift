@@ -22,7 +22,7 @@ class EditProfileTableViewController: UITableViewController {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
         self.phoneNumberTextField.keyboardType = UIKeyboardType.phonePad
-        displayInfoOnEdit(userInfo: editableUserProfile)
+        displayInfoOnEdit(userInfo: User(userDefaults: UserDefaults.standard))
     }
  
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -45,6 +45,7 @@ class EditProfileTableViewController: UITableViewController {
         datePickerView.addTarget(self, action: #selector(datePickerFromValueChanged), for: UIControl.Event.valueChanged)
     }
     @IBAction func saveButtonPressed(_ sender: Any) {
+        let editableUserProfile = User()
         updateUserFromView(userInfo: editableUserProfile)
         editableUserProfile.saveToUserDefaults(userDefaults: UserDefaults.standard)
     }

@@ -34,12 +34,12 @@ class User{
     }
     
     init(userDefaults: UserDefaults){
-        currentLocation = userDefaults.object(forKey: "currentLocation") as? String ?? ""
-        birthdayDate = userDefaults.object(forKey: "birthdate") as? String ?? ""
-        originalLocation = userDefaults.object(forKey: "oiginalLocation") as? String ?? ""
-        phoneNumber = userDefaults.object(forKey: "phoneNumber") as? String ?? ""
-        userBiography = userDefaults.object(forKey: "biography") as? String ?? ""
-        studiedAt = userDefaults.object(forKey: "studiedAt") as? String ?? ""
+        currentLocation = userDefaults.object(forKey: "currentLocation") as? String ?? "Ternopil"
+        birthdayDate = userDefaults.object(forKey: "birthdate") as? String ?? "February 1, 1999"
+        originalLocation = userDefaults.object(forKey: "oiginalLocation") as? String ?? "Lviv"
+        phoneNumber = userDefaults.object(forKey: "phoneNumber") as? String ?? "+380955454545"
+        userBiography = userDefaults.object(forKey: "biography") as? String ?? "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."
+        studiedAt = userDefaults.object(forKey: "studiedAt") as? String ?? "TNTU"
     }
     
     func saveToUserDefaults(userDefaults: UserDefaults) {
