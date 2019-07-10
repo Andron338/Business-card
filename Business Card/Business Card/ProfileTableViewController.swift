@@ -17,7 +17,7 @@ class ProfileTableViewController: UITableViewController {
     @IBOutlet weak var phoneNumberLabel: UILabel!
     @IBOutlet weak var biographyLabel: UITextView!
     @IBOutlet weak var profileImageView: UIImageView!
-    let imageUrl = URL(string: "https://www.splcenter.org/sites/default/files/ir163_briefs_kek.1.jpg") //"https://i.pinimg.com/originals/43/f9/07/43f90790a622f7af320e254686f6243f.jpg")
+    let imageUrl = URL(string: "https://i.pinimg.com/originals/43/f9/07/43f90790a622f7af320e254686f6243f.jpg")
     override func viewDidLoad() {
         super.viewDidLoad()
         profileImageView.layer.cornerRadius = profileImageView.frame.height / 2
@@ -44,6 +44,11 @@ class ProfileTableViewController: UITableViewController {
             nextScene.editableUserProfile = User(userDefaults: UserDefaults.standard)
         }
     }
+    
+
+}
+
+extension ProfileTableViewController {
     func displayInfoOnTable(userInfo: User){
         LivesInLabel.text = "Lives in "+userInfo.currentLocation
         BornOnLabel.text = "Born on "+userInfo.birthdayDate
@@ -52,7 +57,6 @@ class ProfileTableViewController: UITableViewController {
         phoneNumberLabel.text = userInfo.phoneNumber
         biographyLabel.text = userInfo.userBiography
     }
-
 }
 extension UIImageView {
     func load(url: URL) {
