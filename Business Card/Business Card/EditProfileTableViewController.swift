@@ -54,6 +54,28 @@ class EditProfileTableViewController: UITableViewController {
         dateFormatter.dateFormat = "MMMM d, y"
         dateTextField.text = dateFormatter.string(from: sender.date)
     }
+    
+    
+    
+}
+
+extension EditProfileTableViewController {
+    func updateUserFromView(userInfo: User){
+        userInfo.currentLocation = livesInTextField.text ?? ""
+        userInfo.birthdayDate = bornOnTextField.text ?? ""
+        userInfo.originalLocation = FromTextField.text ?? ""
+        userInfo.studiedAt = studiedAtTextField.text ?? ""
+        if phoneNumberTextField.text!.prefix(4) != "+380" {
+            userInfo.phoneNumber = "+380" + (phoneNumberTextField.text ?? "").replacingOccurrences(of: "+", with: "")
+        }
+        else {
+            userInfo.phoneNumber = phoneNumberTextField.text ?? "+380"
+        }
+        userInfo.userBiography = biographyTextField.text ?? ""
+    }
+}
+
+extension EditProfileTableViewController {
     func displayInfoOnEdit(userInfo: User){
         livesInTextField.text = userInfo.currentLocation
         bornOnTextField.text = userInfo.birthdayDate
@@ -61,20 +83,6 @@ class EditProfileTableViewController: UITableViewController {
         studiedAtTextField.text = userInfo.studiedAt
         phoneNumberTextField.text = userInfo.phoneNumber
         biographyTextField.text = userInfo.userBiography
-    }
-    
-    func updateUserFromView(userInfo: User){
-        userInfo.currentLocation = livesInTextField.text ?? ""
-        userInfo.birthdayDate = bornOnTextField.text ?? ""
-        userInfo.originalLocation = FromTextField.text ?? ""
-        userInfo.studiedAt = studiedAtTextField.text ?? ""
-        if phoneNumberTextField.text!.prefix(4) != "+380" {
-             userInfo.phoneNumber = "+380" + (phoneNumberTextField.text ?? "").replacingOccurrences(of: "+", with: "")
-        }
-        else {
-            userInfo.phoneNumber = phoneNumberTextField.text ?? "+380"
-        }
-        userInfo.userBiography = biographyTextField.text ?? ""
     }
 }
 extension UIViewController {
