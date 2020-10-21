@@ -58,7 +58,6 @@
 				837B804432D991D3104B9C89 /* Pods-Business Card.debug.xcconfig */,
 				22CA3C9356AA0E2D9CFB2C17 /* Pods-Business Card.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -83,16 +82,32 @@
 		E615B0D122D25A0E007892F2 /* Business Card */ = {
 			isa = PBXGroup;
 			children = (
+				E6357F1D2540CA780069544F /* Profile Tab */,
+				E6357F1C2540CA5B0069544F /* Supporting Files */,
+			);
+			path = "Business Card";
+			sourceTree = "<group>";
+		};
+		E6357F1C2540CA5B0069544F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				E615B0D222D25A0E007892F2 /* AppDelegate.swift */,
-				D3BD330422D3991800229E39 /* ProfileTableViewController.swift */,
-				D3BD330622D39D8400229E39 /* EditProfileTableViewController.swift */,
-				E615B0D622D25A0E007892F2 /* Main.storyboard */,
-				D376155B22D4B2560024D7F1 /* UserModel.swift */,
 				E615B0D922D25A11007892F2 /* Assets.xcassets */,
 				E615B0DB22D25A11007892F2 /* LaunchScreen.storyboard */,
 				E615B0DE22D25A11007892F2 /* Info.plist */,
 			);
-			path = "Business Card";
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E6357F1D2540CA780069544F /* Profile Tab */ = {
+			isa = PBXGroup;
+			children = (
+				E615B0D622D25A0E007892F2 /* Main.storyboard */,
+				D3BD330422D3991800229E39 /* ProfileTableViewController.swift */,
+				D3BD330622D39D8400229E39 /* EditProfileTableViewController.swift */,
+				D376155B22D4B2560024D7F1 /* UserModel.swift */,
+			);
+			path = "Profile Tab";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
